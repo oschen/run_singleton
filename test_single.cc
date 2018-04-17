@@ -42,7 +42,6 @@ bool is_prog_running()
           }
           char *current_pro=strdup(progname);
           name1=basename(current_pro);
-          printf("program name is %s",name1);
 
           DIR *dir;
           struct dirent *result;
@@ -73,7 +72,7 @@ bool is_prog_running()
               name2=basename(other_pro);
               if(strcmp(name1,name2)==0)
               {
-                  cout<<"current progname"<<name1<<endl;
+                 
                   return true;
               }
 
@@ -97,7 +96,7 @@ int main(int argc,char *argv[])
 {
   if(is_prog_running())
   {
-    printf("the prog is running\n");
+    printf("the prog is already running\n");
     exit(1);
   }
   while(true)
