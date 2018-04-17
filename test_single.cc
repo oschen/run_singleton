@@ -24,7 +24,7 @@ bool is_prog_running()
    char *name1,*name2;
    int fd;
    sprintf(path,"/proc/%ld/cmdline",pid);
-   if(access(path,'F_OK')==0)
+   if(access(path,F_OK)==0)
       {
          fd=open(path,O_RDONLY);
          if(fd==-1)
